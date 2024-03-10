@@ -1,5 +1,6 @@
 <h2><?= esc($title) ?></h2>
 
+<article>
 <?php if (! empty($news) && is_array($news)): ?>
 
     <?php foreach ($news as $news_item): ?>
@@ -20,3 +21,4 @@
     <p>Unable to find any news for you.</p>
 
 <?php endif ?>
+</article>

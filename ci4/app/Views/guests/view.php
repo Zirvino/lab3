@@ -1,5 +1,7 @@
-<h2><?= esc($guest['title']) ?></h2>
-<p><?= esc($guest['name']) ?></p>
-<p><?= esc($guest['email']) ?></p>
-<p><?= esc($guest['website']) ?></p>
-<p><?= esc($guest['comment']) ?></p>
+<article>
+<h2><?= esc($guests['name']) ?></h2>
+<p><?= esc($guests['email']) ?></p>
+<p><?= esc($guests['website']) ?></p>
+<p><?= esc($guests['comment']) ?></p>
+<p><?= esc($guests['gender']) ?></p>
+</article>

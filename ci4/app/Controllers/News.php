@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\NewsModel;
+use CodeIgniter\Exceptions\PageNotFoundException;
 
 class News extends BaseController
 {
@@ -26,7 +27,7 @@ class News extends BaseController
 
         $data['news'] = $model->getNews($slug);
 
-     if (empty($data['news'])) {
+        if (empty($data['news'])) {
             throw new PageNotFoundException('Cannot find the news item: ' . $slug);
         }
 
@@ -45,6 +46,7 @@ class News extends BaseController
             . view('news/create')
             . view('templates/footer');
     }
+
     public function create()
     {
         helper('form');
@@ -76,4 +78,3 @@ class News extends BaseController
             . view('templates/footer');
     }
 }
-
